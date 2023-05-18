@@ -38,7 +38,11 @@ dependencies:
   cupertino_icons: ^1.0.2
   page_view_dot_indicator: ^2.1.0
   animations: ^2.0.7
-  get:
+  onboarding_animation: any
+  marquee: ^2.2.3
+  flutter_svg:
+  
+  
 
 dev_dependencies:
   flutter_test:

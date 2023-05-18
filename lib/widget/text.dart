@@ -7,15 +7,20 @@ class CustomText extends StatelessWidget {
       {super.key,
       required this.text,
       required this.colorText,
-      required this.fontSize});
+      required this.fontSize,
+      required this.fontWeight});
   final String text;
   final Color colorText;
   final double fontSize;
+  final FontWeight fontWeight;
   @override
   Widget build(BuildContext context) {
     return Text(text,
         textAlign: TextAlign.center,
         style: TextStyle(
-            color: colorText, fontFamily: 'Tajawal-Bold', fontSize: fontSize));
+            color: colorText,
+            fontFamily: 'Tajawal-Bold',
+            fontSize: fontSize,
+            fontWeight: fontWeight));
   }
 }
