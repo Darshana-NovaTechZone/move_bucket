@@ -13,11 +13,17 @@ class CustomList extends StatefulWidget {
       required this.cat,
       required this.text,
       required this.width,
-      required this.height});
+      required this.height,
+      required this.text1,
+      required this.text2,
+      required this.textcolor});
   final List cat;
   final bool text;
   final double width;
   final double height;
+  final String text1;
+  final String text2;
+  final Color textcolor;
 
   @override
   State<CustomList> createState() => _CustomListState();
@@ -73,7 +79,7 @@ class _CustomListState extends State<CustomList> {
                         width: 0),
                   ),
                   child: Container(
-                    // height: widget.height,
+                    width: widget.width,
                     // decoration: BoxDecoration(
                     //     borderRadius: BorderRadius.circular(15),
                     //     color: selected == widget.cat[index]
@@ -100,14 +106,16 @@ class _CustomListState extends State<CustomList> {
                               ? Padding(
                                   padding: const EdgeInsets.all(4.0),
                                   child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       CustomText(
-                                          text: 'IMAGE',
+                                          text: widget.text1,
                                           fontSize: 15,
-                                          colorText: Colors.white54,
+                                          colorText: widget.textcolor,
                                           fontWeight: FontWeight.normal),
                                       CustomText(
-                                          text: '2018',
+                                          text: widget.text2,
                                           fontSize: 13,
                                           colorText: Colors.white54,
                                           fontWeight: FontWeight.normal)

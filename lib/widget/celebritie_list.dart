@@ -10,7 +10,7 @@ class Celebrities extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        height: 120,
+        height: 100,
         width: MediaQuery.of(context).size.width - 150,
         child: ListView.builder(
             itemCount: list.length,
@@ -20,7 +20,7 @@ class Celebrities extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: ClipOval(
                   child: SizedBox.fromSize(
-                    size: Size.fromRadius(50), // Image radius
+                    size: Size.fromRadius(40), // Image radius
                     child: Image.asset(list[index], fit: BoxFit.cover),
                   ),
                 ),

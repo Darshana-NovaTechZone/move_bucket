@@ -19,6 +19,7 @@ import '../../widget/drawer.dart';
 import '../../widget/fan_favorites_list.dart';
 import '../../widget/hom_sub_row.dart';
 import '../../widget/recently.dart';
+import '../news/news.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -34,10 +35,7 @@ class _HomePageState extends State<HomePage> {
   late VideoPlayerController _controller;
   static const List<Widget> _pages = <Widget>[
     CustomHome(),
-    Icon(
-      Icons.chat,
-      size: 150,
-    ),
+    News(),
     Icon(
       Icons.chat,
       size: 150,
