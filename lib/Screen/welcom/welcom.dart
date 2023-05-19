@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:movie_bucket/Screen/creat_account/create_account.dart';
+import 'package:movie_bucket/Screen/home/home.dart';
 import 'package:movie_bucket/constan/color.dart';
 import 'package:movie_bucket/widget/radius_button.dart';
 import 'package:movie_bucket/widget/text.dart';
@@ -33,14 +34,24 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             padding: const EdgeInsets.all(25.0),
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Container(
-                  alignment: Alignment.centerRight,
-                  child: CustomText(
-                    fontWeight: FontWeight.bold,
-                    colorText: Colors.white60,
-                    fontSize: 20,
-                    text: 'Skip',
-                  )),
+              TextButton(
+                onPressed: () {
+                   Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  HomePage()),
+                                        );
+                },
+                child: Container(
+                    alignment: Alignment.centerRight,
+                    child: CustomText(
+                      fontWeight: FontWeight.bold,
+                      colorText: Colors.white60,
+                      fontSize: 20,
+                      text: 'Skip',
+                    )),
+              ),
               IconButton(
                   onPressed: () {
                     Navigator.pop(context);

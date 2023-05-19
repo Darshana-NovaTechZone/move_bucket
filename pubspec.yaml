@@ -41,6 +41,7 @@ dependencies:
   onboarding_animation: any
   marquee: ^2.2.3
   flutter_svg:
+  video_player:
   
   
 
