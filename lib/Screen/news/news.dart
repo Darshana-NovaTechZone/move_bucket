@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:movie_bucket/widget/custom_list.dart';
+import 'package:movie_bucket/widget/dropdown.dart';
 
 import '../../constan/color.dart';
 import '../../widget/celebritie_list.dart';
@@ -16,8 +17,8 @@ class News extends StatefulWidget {
 
 class _NewsState extends State<News> {
   List celebrities = [
-    'assets/p1.PNG',
-    'assets/p2.PNG',
+    'assets/emm.PNG',
+    'assets/emmy.PNG',
     'assets/p4.PNG',
     'assets/p5.PNG',
     'assets/v2.PNG',
@@ -39,36 +40,7 @@ class _NewsState extends State<News> {
                   colorText: white,
                   fontSize: 40,
                   fontWeight: FontWeight.bold),
-              Container(
-                alignment: Alignment.center,
-                height: 60,
-                width: 160,
-                decoration: BoxDecoration(
-                    color: yellow, borderRadius: BorderRadius.circular(30)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CustomText(
-                        text: "Awards",
-                        colorText: black,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold),
-                    DropdownButton<String>(
-                      icon: Icon(
-                        Icons.keyboard_arrow_down,
-                        size: 40,
-                      ),
-                      items: <String>['A', 'B', 'C', 'D'].map((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value),
-                        );
-                      }).toList(),
-                      onChanged: (_) {},
-                    )
-                  ],
-                ),
-              )
+              CustomDropDowng(text: "Awards")
             ],
           ),
           SizedBox(
@@ -159,14 +131,42 @@ class _NewsState extends State<News> {
                   )),
             ],
           ),
+          SizedBox(
+            height: 20,
+          ),
           CustomList(
+              textpossitionh: 10,
+              textpossition: 20,
               text1: "2018 Film Indipendent Spirit Awards",
               text2: "2018",
-              textcolor: Colors.white54,
+              textcolor: white,
               cat: celebrities,
               text: true,
               width: 200,
-              height: 320)
+              height: 320),
+          SizedBox(
+            height: 30,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CustomText(
+                      text: "Suggested",
+                      colorText: Colors.white70,
+                      fontSize: 25,
+                      fontWeight: FontWeight.normal),
+                  CustomText(
+                      text: "News that might interesting you",
+                      colorText: Colors.white60,
+                      fontSize: 20,
+                      fontWeight: FontWeight.normal),
+                ],
+              ),
+            ],
+          ),
         ]),
       ),
     );
