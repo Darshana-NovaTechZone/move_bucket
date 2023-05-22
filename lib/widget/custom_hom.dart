@@ -165,7 +165,9 @@ class _CustomHomeState extends State<CustomHome> {
                 text2: 'Most Popular in the world',
                 text3: 'View all',
               ),
-              CustomList( textpossitionh: 0,
+              CustomList(
+                imgh: 200,
+                textpossitionh: 0,
                 textpossition: 0,
                 text1: "Move",
                 text2: "2018",
@@ -180,7 +182,9 @@ class _CustomHomeState extends State<CustomHome> {
                 text2: 'Latest updates in the actinf field',
                 text3: 'View all',
               ),
-              CustomList( textpossitionh: 0,
+              CustomList(
+                imgh: 200,
+                textpossitionh: 0,
                 textpossition: 0,
                 text1: "Move",
                 text2: "2018",

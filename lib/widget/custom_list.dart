@@ -19,7 +19,8 @@ class CustomList extends StatefulWidget {
       required this.text2,
       required this.textcolor,
       required this.textpossition,
-      required this.textpossitionh});
+      required this.textpossitionh,
+      required this.imgh});
   final List cat;
   final bool text;
   final double width;
@@ -29,6 +30,7 @@ class CustomList extends StatefulWidget {
   final Color textcolor;
   final double textpossition;
   final double textpossitionh;
+  final double imgh;
 
   @override
   State<CustomList> createState() => _CustomListState();
@@ -71,6 +73,7 @@ class _CustomListState extends State<CustomList> {
                   MaterialPageRoute(
                       builder: (context) => DetailsScreen(
                             img: widget.cat[index],
+                            text: '',
                           )),
                 );
               },
@@ -103,7 +106,7 @@ class _CustomListState extends State<CustomList> {
                           Padding(
                             padding: const EdgeInsets.all(4.0),
                             child: SizedBox(
-                              height: 200,
+                              height: widget.imgh,
                               width: widget.width,
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(10),
