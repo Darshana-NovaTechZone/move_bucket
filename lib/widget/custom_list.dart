@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:movie_bucket/Screen/details/details.dart';
+import 'package:movie_bucket/Screen/home/popular_move_details/popular_move_details.dart';
 import 'package:movie_bucket/widget/text.dart';
 
 import '../constan/color.dart';
@@ -68,14 +69,20 @@ class _CustomListState extends State<CustomList> {
                     color = true;
                   });
                 }
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => DetailsScreen(
-                            img: widget.cat[index],
-                            text: '',
-                          )),
-                );
+                widget.text
+                    ? Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => PopularMoveDetails()),
+                      )
+                    : Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DetailsScreen(
+                                  img: widget.cat[index],
+                                  text: '',
+                                )),
+                      );
               },
               child: Padding(
                 padding: const EdgeInsets.all(4.0),
@@ -95,11 +102,7 @@ class _CustomListState extends State<CustomList> {
                   ),
                   child: Container(
                     width: widget.width,
-                    // decoration: BoxDecoration(
-                    //     borderRadius: BorderRadius.circular(15),
-                    //     color: selected == widget.cat[index]
-                    //         ? light_black
-                    //         : dark_black),
+             
                     child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [

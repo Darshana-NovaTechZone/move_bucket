@@ -7,7 +7,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:movie_bucket/constan/color.dart';
 import 'package:movie_bucket/widget/arrow_button.dart';
-import 'package:movie_bucket/widget/custom_hom.dart';
+import 'package:movie_bucket/widget/custom_home.dart';
 import 'package:movie_bucket/widget/custom_list.dart';
 import 'package:movie_bucket/widget/search_bar.dart';
 import 'package:movie_bucket/widget/custom_textfield.dart';
